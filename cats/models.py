@@ -26,7 +26,7 @@ class Owner(models.Model):
 
 class Cat(models.Model):
     name = models.CharField(max_length=16)
-    color = models.CharField(max_length=16, choices=CHOICES)
+    color = models.CharField(max_length=16)
     birth_year = models.IntegerField()
     owner = models.ForeignKey(
         Owner, related_name='cats', on_delete=models.CASCADE)
